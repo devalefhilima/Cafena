@@ -67,3 +67,50 @@ section {
     }
   }
 }
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #8a6940;
+}
+
+.home-container {
+  background-image: url(./img/home-img.jpg);
+  background-size: cover;
+  background-position: center;
+
+  & section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+  }
+
+  & .content {
+    max-width: 500px;
+
+    & h3 {
+      color: var(--white);
+      font-size: 6rem;
+      text-transform: uppercase;
+
+    }
+
+    & p {
+      color: var(--white);
+      font-size: 2rem;
+      font-weight: 100; 
+      line-height: 1.8;
+      padding: 1rem 0;
+    }
+  }
+}
