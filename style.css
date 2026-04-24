@@ -36,6 +36,7 @@ section {
   right: 0;
   z-index: 99;
   border-bottom: var(--border);
+  background-color: var(--bg);
 
   & section {
     display: flex;
@@ -81,6 +82,7 @@ section {
 
 .btn:hover {
   background-color: #8a6940;
+  letter-spacing: 0.1rem;
 }
 
 .home-container {
@@ -111,6 +113,42 @@ section {
       font-weight: 100; 
       line-height: 1.8;
       padding: 1rem 0;
+    }
+  }
+}
+
+.title {
+  font-size: 4rem;
+  color: var(--primary-color);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+
+  & span {
+    color: var(--white);
+    text-transform: uppercase;
+  } 
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  background-color: var(--black);
+  gap: 1rem;
+
+  & .content {
+    padding: 2rem;
+
+    & h3 {
+      font-size: 3rem;
+      color: var(--white);
+    }
+
+    & p {
+      font-size: 1.6rem;
+      color: var(--white);
+      padding: 1rem 0;
+      line-height: 1.8;
     }
   }
 }
