@@ -12,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   transition: 0.2s linear;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -28,6 +29,12 @@ section {
   margin: 0 auto;
   max-width: 1200px;
 }
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem; 
+  }
 
 .header {
   position: fixed;
@@ -154,46 +161,93 @@ section {
 }
 
 .menu {
-  & .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+  & .box {
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
 
-    & .box {
-      text-align: center;
-      border: var(--border);
-      padding: 5rem;
+    & img {
+      height: 10rem;
+    }
+
+    & h3 {
+      color: var(--white);
+      font-size: 2rem;
+      padding: 1rem 0;
+    }
+
+    & .price {
+      color: var(--white);
+      font-size: 2.5rem;
+      padding: 0.5rem 0;
+
+      & span {
+        font-size: 1.5rem;
+        text-decoration: line-through;
+        font-weight: 100;
+      }
+    }
+  }
+
+  & .box:hover {
+    background-color: var(--white);
+  }
+
+  & .box:hover>* {
+    color: var(--black);
+  }
+}
+
+.review {
+  & .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+
+    & p {
+      font-size: 1.5rem;
+      color: var(--white);
+      padding: 2rem 0;
+      line-height: 1.6;
+      font-weight: 100;
+    }
+
+    & .user {
+      height: 7rem;
+      width: 7rem;
+      border-radius: 50%;
+    }
+
+    & h3 {
+      color: var(--white);
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  text-align: center;
+
+  & .share {
+    padding: 1rem 0;
+
+    & img {
+      margin: 0.3rem;
+      border-radius: 50%;
       cursor: pointer;
-
-      & img {
-        height: 10rem;
-      }
-
-      & h3 {
-        color: var(--white);
-        font-size: 2rem;
-        padding: 1rem 0;
-      }
-
-      & .price {
-        color: var(--white);
-        font-size: 2.5rem;
-        padding: 0.5rem 0;
-
-        & span {
-          font-size: 1.5rem;
-          text-decoration: line-through;
-          font-weight: 100;
-        }
-      }
     }
 
-    & .box:hover {
-      background-color: var(--white);
-    }
-
-    & .box:hover>* {
-      color: var(--black);
+    & img:hover {
+      background-color: var(--primary-color);
+      padding: 0.2rem;
     }
   }
 }
